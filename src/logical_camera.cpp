@@ -150,9 +150,9 @@ std::array<std::vector<Product>,19> LogicalCamera::findparts(){
     "/ariac/logical_camera_agv1as2", 1, 
     &LogicalCamera::logical_camera_agv1as2_callback, this);
 
-  ros::Subscriber logical_camera_agv1ks_subscriber = node_.subscribe(
-    "/ariac/logical_camera_agv1ks", 10, 
-    &LogicalCamera::logical_camera_agv1ks_callback, this);
+  // ros::Subscriber logical_camera_agv1ks_subscriber = node_.subscribe(
+  //   "/ariac/logical_camera_agv1ks", 10, 
+  //   &LogicalCamera::logical_camera_agv1ks_callback, this);
 
   ros::Subscriber logical_camera_agv2as1_subscriber = node_.subscribe(
     "/ariac/logical_camera_agv2as1", 1, 
@@ -162,9 +162,9 @@ std::array<std::vector<Product>,19> LogicalCamera::findparts(){
     "/ariac/logical_camera_agv2as2", 1, 
     &LogicalCamera::logical_camera_agv2as2_callback, this);
 
-  ros::Subscriber logical_camera_agv2ks_subscriber = node_.subscribe(
-    "/ariac/logical_camera_agv2ks", 10, 
-    &LogicalCamera::logical_camera_agv2ks_callback, this);
+  // ros::Subscriber logical_camera_agv2ks_subscriber = node_.subscribe(
+  //   "/ariac/logical_camera_agv2ks", 10, 
+  //   &LogicalCamera::logical_camera_agv2ks_callback, this);
 
   ros::Subscriber logical_camera_agv3as3_subscriber = node_.subscribe(
     "/ariac/logical_camera_agv3as3", 1, 
@@ -174,9 +174,9 @@ std::array<std::vector<Product>,19> LogicalCamera::findparts(){
     "/ariac/logical_camera_agv3as4", 1, 
     &LogicalCamera::logical_camera_agv3as4_callback, this);
 
-  ros::Subscriber logical_camera_agv3ks_subscriber = node_.subscribe(
-    "/ariac/logical_camera_agv3ks", 10, 
-    &LogicalCamera::logical_camera_agv3ks_callback, this);
+  // ros::Subscriber logical_camera_agv3ks_subscriber = node_.subscribe(
+  //   "/ariac/logical_camera_agv3ks", 10, 
+  //   &LogicalCamera::logical_camera_agv3ks_callback, this);
 
   ros::Subscriber logical_camera_agv4as3_subscriber = node_.subscribe(
     "/ariac/logical_camera_agv4as3", 1, 
@@ -186,9 +186,9 @@ std::array<std::vector<Product>,19> LogicalCamera::findparts(){
     "/ariac/logical_camera_agv4as4", 1, 
     &LogicalCamera::logical_camera_agv4as4_callback, this);
 
-  ros::Subscriber logical_camera_agv4ks_subscriber = node_.subscribe(
-    "/ariac/logical_camera_agv4ks", 10, 
-    &LogicalCamera::logical_camera_agv4ks_callback, this);
+  // ros::Subscriber logical_camera_agv4ks_subscriber = node_.subscribe(
+  //   "/ariac/logical_camera_agv4ks", 10, 
+  //   &LogicalCamera::logical_camera_agv4ks_callback, this);
 
   ros::Subscriber logical_camera_belt_subscriber = node_.subscribe(
     "/ariac/logical_camera_belt", 10, 

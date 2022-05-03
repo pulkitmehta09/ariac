@@ -958,7 +958,7 @@ namespace gantry_motioncontrol {
 
         // above near_as3
         near_as3_.gantry_torso_preset = { -2.7, 2.68, 3.14 };
-        near_as3_.gantry_arm_preset = { 0 , -1.13 , 1.88 ,-0.72 ,1.55 ,0.83 };
+        near_as3_.gantry_arm_preset = { 0 , -1.65 , 1.88 ,-0.72 ,1.55 ,0.83 };
         near_as3_.gantry_full_preset.insert(near_as3_.gantry_full_preset.begin(), near_as3_.gantry_torso_preset.begin(), near_as3_.gantry_torso_preset.end());
         near_as3_.gantry_full_preset.insert(near_as3_.gantry_full_preset.end(), near_as3_.gantry_arm_preset.begin(), near_as3_.gantry_arm_preset.end());
 
@@ -988,7 +988,7 @@ namespace gantry_motioncontrol {
 
         // above near_as1
         near_as1_.gantry_torso_preset = { -3.0, -3.21, 3.14 };
-        near_as1_.gantry_arm_preset = { 0 , -1.13 , 1.88 ,-0.72 ,1.55 ,0.83 };
+        near_as1_.gantry_arm_preset = { 0 , -1.65 , 1.88 ,-0.72 ,1.55 ,0.83 };
         near_as1_.gantry_full_preset.insert(near_as1_.gantry_full_preset.begin(), near_as1_.gantry_torso_preset.begin(), near_as1_.gantry_torso_preset.end());
         near_as1_.gantry_full_preset.insert(near_as1_.gantry_full_preset.end(), near_as1_.gantry_arm_preset.begin(), near_as1_.gantry_arm_preset.end());
 
@@ -1018,7 +1018,7 @@ namespace gantry_motioncontrol {
 
         // above near_as2
         near_as2_.gantry_torso_preset = { -8.0, -3.21, 3.14 };
-        near_as2_.gantry_arm_preset = { 0 , -1.13 , 1.88 ,-0.72 ,1.55 ,0.83 };
+        near_as2_.gantry_arm_preset = { 0 , -1.65 , 1.88 ,-0.72 ,1.55 ,0.83 };
         near_as2_.gantry_full_preset.insert(near_as2_.gantry_full_preset.begin(), near_as2_.gantry_torso_preset.begin(), near_as2_.gantry_torso_preset.end());
         near_as2_.gantry_full_preset.insert(near_as2_.gantry_full_preset.end(), near_as2_.gantry_arm_preset.begin(), near_as2_.gantry_arm_preset.end());
 
@@ -1042,7 +1042,7 @@ namespace gantry_motioncontrol {
 
         // above near_as4
         near_as4_.gantry_torso_preset = { -8.0, 2.91, 3.14 };
-        near_as4_.gantry_arm_preset = { 0 , -1.13 , 1.88 ,-0.72 ,1.55 ,0.83 };
+        near_as4_.gantry_arm_preset = { 0 , -1.65 , 1.88 ,-0.72 ,1.55 ,0.83 };
         near_as4_.gantry_full_preset.insert(near_as4_.gantry_full_preset.begin(), near_as4_.gantry_torso_preset.begin(), near_as4_.gantry_torso_preset.end());
         near_as4_.gantry_full_preset.insert(near_as4_.gantry_full_preset.end(), near_as4_.gantry_arm_preset.begin(), near_as4_.gantry_arm_preset.end());
 
@@ -1423,43 +1423,58 @@ namespace gantry_motioncontrol {
             arm_gantry_group_.move();
         }
 
-        
+        double z_t{0.0};
 
         if (location == "agv1") {
             goToPresetLocation(home_);
             goToPresetLocation(at_bins1234_);
             goToPresetLocation(at_agv1_);
+            z_t = 0.18;
         }
         if (location == "agv2") {
             goToPresetLocation(home_);
             goToPresetLocation(at_bins1234_);
             goToPresetLocation(at_agv2_);
+            z_t = 0.18;
+
         }
         if (location == "agv3") {
             goToPresetLocation(home_);
             goToPresetLocation(at_bins5678_);
             goToPresetLocation(at_agv3_);
+            z_t = 0.18;
+
         }
         if (location == "agv4") {
             goToPresetLocation(home_);
             goToPresetLocation(at_bins5678_);
             goToPresetLocation(at_agv4_);
+            z_t = 0.18;
+
         }
         if (location == "as1") {
             goToPresetLocation(near_as1_);
             goToPresetLocation(at_as1_);
+            z_t = 0.05;
+
         }
         if (location == "as2") {
             goToPresetLocation(near_as2_);
             goToPresetLocation(at_as2_);
+            z_t = 0.05;
+
         }
         if (location == "as3") {
             goToPresetLocation(near_as3_);
             goToPresetLocation(at_as3_);
+            z_t = 0.05;
+
         }
         if (location == "as4") {
             goToPresetLocation(near_as4_);
             goToPresetLocation(at_as4_);
+            z_t = 0.05;
+
         }
 
 
@@ -1503,7 +1518,7 @@ namespace gantry_motioncontrol {
         arm_pose.orientation.w = q_rslt.w();
         arm_pose.position.x = target_in_world_frame.position.x;
         arm_pose.position.y = target_in_world_frame.position.y;
-        arm_pose.position.z = target_in_world_frame.position.z + 0.2;
+        arm_pose.position.z = target_in_world_frame.position.z + z_t;
 
 
         arm_gantry_group_.setPoseTarget(arm_pose);

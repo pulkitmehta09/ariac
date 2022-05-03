@@ -20,7 +20,18 @@ time_limit: -1
 
 agv_infos:
   agv1:
-    location: ks1
+    location: as1
+    products:
+      part_0:
+        type: assembly_battery_green
+        pose:
+          xyz: [0.1, 0.1, 0]
+          rpy: [0, 0, 0]
+      part_1:
+        type: assembly_pump_blue
+        pose:
+          xyz: [-0.1, -0.1, 0]
+          rpy: [0, 0, pi/2]
   agv2:
     location: as1
     products:
@@ -33,7 +44,7 @@ agv_infos:
         type: assembly_pump_blue
         pose:
           xyz: [-0.1, -0.1, 0]
-          rpy: [pi, 0, pi/2]
+          rpy: [0, 0, pi/2]
   agv3:
     location: ks3
   agv4:
@@ -56,7 +67,7 @@ orders:
         #   pose:
         #     xyz: [0.1, 0.1, 0]
         #     rpy: [0, 0, 0]
-        part_0:
+        part_1:
           type: assembly_pump_blue
           pose:
             xyz: [-0.1, -0.1, 0]
@@ -68,8 +79,8 @@ orders:
     announcement_condition: agv_station_reached
     announcement_condition_value: agv4_at_as3
     assembly:
-      shipment_count: 2
-      stations: [as3, as1]
+      shipment_count: 1
+      stations: [as1]
       products:
         part_0:
           type: assembly_battery_green
@@ -80,7 +91,7 @@ orders:
           type: assembly_pump_blue
           pose:
             xyz: [0.032085, -0.152835, 0.25]
-            rpy: [pi, 0, 0]
+            rpy: [0, 0, 0]
 
 models_over_bins:
    bin3:
