@@ -13,13 +13,13 @@ LogicalCamera::LogicalCamera(ros::NodeHandle & node)
 
     // quality_control_sensor4_subscriber = node_.subscribe("/ariac/quality_control_sensor_4", 10, &LogicalCamera::quality_control_sensor4_callback, this);
     
-    ros::Subscriber logical_camera_bins0_subscriber = node_.subscribe(
-    "/ariac/logical_camera_bins0", 1, 
-    &LogicalCamera::logical_camera_bins0_callback, this);
+    // ros::Subscriber logical_camera_bins0_subscriber = node_.subscribe(
+    // "/ariac/logical_camera_bins0", 1, 
+    // &LogicalCamera::logical_camera_bins0_callback, this);
 
-    ros::Subscriber logical_camera_bins1_subscriber = node_.subscribe(
-    "/ariac/logical_camera_bins1", 1, 
-    &LogicalCamera::logical_camera_bins1_callback, this);
+    // ros::Subscriber logical_camera_bins1_subscriber = node_.subscribe(
+    // "/ariac/logical_camera_bins1", 1, 
+    // &LogicalCamera::logical_camera_bins1_callback, this);
 
 }
 

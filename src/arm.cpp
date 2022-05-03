@@ -1503,7 +1503,7 @@ namespace gantry_motioncontrol {
         arm_pose.orientation.w = q_rslt.w();
         arm_pose.position.x = target_in_world_frame.position.x;
         arm_pose.position.y = target_in_world_frame.position.y;
-        arm_pose.position.z = target_in_world_frame.position.z + 0.1;
+        arm_pose.position.z = target_in_world_frame.position.z + 0.2;
 
 
         arm_gantry_group_.setPoseTarget(arm_pose);
