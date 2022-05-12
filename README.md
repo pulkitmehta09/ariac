@@ -9,7 +9,7 @@ This package requires:
 * Gazebo 9.15+
 * ARIAC and its dependencies 
 * C++
---
+
 
 - Clone the package into the workspace and build the package using,
 ```
