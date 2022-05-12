@@ -1,5 +1,5 @@
-# group5_rwa4
-# Package for ENPM 663-RWA4. 
+# group5_final_project
+# Package for ENPM 663-Final-Project
 
 Authors:
 Darshan Jain, Pulkit Mehta, Jeffin Kachappilly
@@ -26,6 +26,4 @@ $ roslaunch group5_rwa4 ariac.launch
 $ rosrun group5_rwa4 My_node
 ```
 
-If there is any issue with the package or the robot goes haywire please refer the video videos in the link:
-https://drive.google.com/drive/folders/1Nd7fgSiYv5HiPgnibM_dSv1jY6mkp2DT?usp=sharing
 
