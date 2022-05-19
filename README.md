@@ -1,8 +1,7 @@
-# group5_final_project
-# Package for ENPM 663-Final-Project
+# Package for ARIAC
 
 Authors:
-Darshan Jain, Pulkit Mehta, Jeffin Kachappilly
+Pulkit Mehta, Darshan Jain, Jeffin Kachappilly
 
 This package requires:
 * ROS Melodic
