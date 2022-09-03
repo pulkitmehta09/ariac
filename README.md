@@ -1,7 +1,6 @@
 # Package for ARIAC
 
-Authors:
-Pulkit Mehta, Darshan Jain, Jeffin Kachappilly
+Detailed report containing details can be found in the current folder tree.
 
 This package requires:
 * ROS Melodic
