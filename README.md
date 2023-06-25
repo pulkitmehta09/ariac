@@ -24,4 +24,4 @@ $ roslaunch group5_rwa4 ariac.launch
 $ rosrun group5_rwa4 My_node
 ```
 
-
+![](https://github.com/pulkitmehta09/ariac/blob/main/output_assembly.gif)
